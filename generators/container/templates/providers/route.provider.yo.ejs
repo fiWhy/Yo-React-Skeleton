@@ -1,0 +1,17 @@
+import { IRouteProvider } from '<%= component.pathToRoot %>../utils/router/contracts/route.provider';
+import { IRouteCombiner } from '<%= component.pathToRoot %>../utils/router/route.combiner';
+import <%= component.upperCamel %> from "../index";
+
+class <%= component.upperCamel %>RouteProvider implements IRouteProvider {
+    public register(routeCombiner: IRouteCombiner) {
+        routeCombiner.addRoute({
+            path: "<%= route.value %>", 
+            component: <%= component.upperCamel %>,
+            exact: true,
+        });
+    }
+}
+
+const _<%= component.upperCamel %>RouteProvider = new <%= component.upperCamel %>RouteProvider;
+
+export default _<%= component.upperCamel %>RouteProvider;

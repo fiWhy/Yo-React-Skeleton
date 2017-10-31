@@ -1,0 +1,13 @@
+import { IReducerProvider } from '<%= component.pathToRoot %>../utils/reducer/contracts/reducer.provider';
+import { IReducerCombiner } from '<%= component.pathToRoot %>../utils/reducer/reducer.combiner';
+import { <%= reducer.upperCamel %>Reducer } from '../reducers/<%= reducer.dashed %>.reducer';
+
+class <%= component.upperCamel %>ReducerProvider implements IReducerProvider {
+    public register(reducerCombiner: IReducerCombiner) {
+        reducerCombiner.registerReducer("<%= component.upperCamel %><%= reducer.upperCamel %>Reducer", <%= reducer.upperCamel %>Reducer);
+    }
+}
+
+const _<%= component.upperCamel %>ReducerProvider = new <%= component.upperCamel %>ReducerProvider;
+
+export default _<%= component.upperCamel %>ReducerProvider;
