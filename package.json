@@ -1,6 +1,6 @@
 {
   "name": "generator-react-skeleton",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "React 16 skeleton",
   "homepage": "",
   "author": {
@@ -71,5 +71,5 @@
     "plugins": ["prettier"]
   },
   "repository": "/generator-react-skeleton",
-  "license": "GPL-3.0"
+  "license": "MIT"
 }
