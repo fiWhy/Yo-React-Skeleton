@@ -16,12 +16,30 @@ Then generate your new project:
 yo react-skeleton
 ```
 
-## Getting To Know Yeoman
+## Commands
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+Creating container with presentation. Optional parameters are: action, reducer, async, route - to configure your container.
+```bash
+yo react-skeleton:container <path-to-container> --action=<action-name> --reducer=<reducer-name> --route=/<route>--async
+```
+
+Creating pure presentation.
+```bash
+yo react-skeleton:presentation <path-to-presentation>
+```
+
+Creating pure action. Optional parameter is async.
+```bash
+yo react-skeleton:action <path-to-action> --async
+```
+
+Creating pure action. Optional parameters are: action ( path to action to connect to reducer; path will be added to import path without modifications ),
+actionName ( name of action that will be placed between brackets {} in "import" directive ), async ( flag that will control is this reducer needs to be async ).
+```bash
+yo react-skeleton:reducer <path-to-reducer> --action=<action-path-from-reducer-folder> --actionName=<action-name> --async
+```
+
+All your abstractions will be have path based on source root you pick in start.
 
 ## License
 
