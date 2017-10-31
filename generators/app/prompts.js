@@ -26,7 +26,8 @@ module.exports = [
 		type: "confirm",
 		name: "styledComponents",
 		message: "Would you like to use styled-components?",
-		default: true
+		default: true,
+		store: true
 	},
 	{
 		type: "confirm",

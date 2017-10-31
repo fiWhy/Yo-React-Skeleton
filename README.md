@@ -28,6 +28,11 @@ Creating pure presentation.
 yo react-skeleton:presentation <path-to-presentation>
 ```
 
+Creating pure styled component. Optional parameter is tagName ( default is div ).
+```bash
+yo react-skeleton:styled <path-to-styled> --tagName=<tag-name>
+```
+
 Creating pure action. Optional parameter is async.
 ```bash
 yo react-skeleton:action <path-to-action> --async

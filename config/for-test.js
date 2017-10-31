@@ -140,3 +140,23 @@ module.exports.reducerTemplate = function(
 	}
 	return `export const ${reducerName} = (state =  [], action) => { return state; };`;
 };
+
+module.exports.styled = styledName => {
+	const { sourceRoot } = mainConfig();
+	let preparations = textHelpers.componentNamePreparation(styledName);
+	const { dashed, fullPath } = preparations;
+	const componentPath = foldersConfig.detectPath(sourceRoot, fullPath);
+	let contentFiles = [`${componentPath}/${dashed}.tsx`];
+
+	return Object.assign(
+		{
+			contentFiles
+		},
+		preparations
+	);
+};
+
+module.exports.styledTemplate = function(styledName, tagName) {
+	return `import styled from "styled-components";
+	export const ${styledName} = styled.${tagName}\`\`;`;
+};

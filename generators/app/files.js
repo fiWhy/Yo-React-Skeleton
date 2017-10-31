@@ -1,4 +1,4 @@
-module.exports = function({ styledComponents, sourceRoot }) {
+module.exports = function({ sourceRoot }) {
 	let mainFiles = [
 		{ from: "_tsconfig.json", to: "tsconfig.json" },
 		{ from: "package.json.yo.tpl", to: "package.json" },
@@ -25,15 +25,6 @@ module.exports = function({ styledComponents, sourceRoot }) {
 		{ from: "src/app.tsx", to: `${sourceRoot}/app.tsx` },
 		{ from: "src/vendor.ts", to: `${sourceRoot}/vendor.ts` }
 	];
-
-	if (styledComponents) {
-		mainFiles = mainFiles.concat([
-			{
-				from: "src/styled/container.yo.tpl",
-				to: `${sourceRoot}/styled/container.tsx`
-			}
-		]);
-	}
 
 	return mainFiles;
 };
