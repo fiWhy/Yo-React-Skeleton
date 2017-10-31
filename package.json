@@ -1,6 +1,6 @@
 {
   "name": "generator-react-skeleton",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "React 16 skeleton",
   "homepage": "",
   "author": {
@@ -70,6 +70,6 @@
     },
     "plugins": ["prettier"]
   },
-  "repository": "/generator-react-skeleton",
+  "repository": "https://github.com/fiWhy/Yo-React-Skeleton",
   "license": "MIT"
 }
