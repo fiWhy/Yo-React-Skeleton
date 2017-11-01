@@ -1,10 +1,12 @@
 import * as React from "react";
+import { createStore } from "redux";
 import { create } from "react-test-renderer";
 import "jest";
 import <%= component.upperCamel %> from "./";
 
 describe("<%= component.upperCamel %> Component", () => {
-    const component = create(<<%= component.upperCamel %> />)
+    const store = createStore(() => {});
+    const component = create(<<%= component.upperCamel %> store={store} />)
     const tree = component.toJSON();
     it("renders", () => {
         expect(tree).toMatchSnapshot();

@@ -23,28 +23,19 @@ module.exports = class extends Generator {
 
 	generateStarterData() {
 		const { starterData, styledComponents } = this.props;
-		const options = {
-			route: "",
-			action: "",
-			reducer: ""
-		};
+		const options = route => ({
+			route,
+			action: "data",
+			reducer: "data"
+		});
 		if (starterData) {
-			this.composeWith(
-				require.resolve("../container"),
-				Object.assign(
-					{
-						arguments: ["components/home"]
-					},
-					options
-				)
-			);
 			this.composeWith(
 				require.resolve("../container"),
 				Object.assign(
 					{
 						arguments: ["components/dashboard"]
 					},
-					options
+					options("/")
 				)
 			);
 		}
@@ -52,12 +43,9 @@ module.exports = class extends Generator {
 		if (styledComponents) {
 			this.composeWith(
 				require.resolve("../styled"),
-				Object.assign(
-					{
-						arguments: ["styled/container"]
-					},
-					options
-				)
+				Object.assign({
+					arguments: ["styled/container"]
+				})
 			);
 		}
 	}
