@@ -128,17 +128,16 @@ module.exports.reducerTemplate = function(
 	isAsync = false
 ) {
 	const reducerName = `${reducer}Reducer`;
-	if (action) {
-		if (isAsync) {
-			return `import { ${actionName} } from "${action}";
+	if (isAsync) {
+		return `import { ${actionName} } from "${action}";
 			import { createReducerAsync } from "redux-act-async";
 			export const ${reducerName} = createReducerAsync(${actionName});`;
-		}
-		return `import { ${actionName} } from "${action}";
-			import { createReducer } from "redux-act";
-			export const ${reducerName} = createReducer(${actionName});`;
 	}
-	return `export const ${reducerName} = (state =  [], action) => { return state; };`;
+	return `import { ${actionName} } from "${action}";
+			import { createReducer } from "redux-act";
+			const reducer = createReducer({}, {});
+			reducer.on(${actionName}, state => state );
+			export const ${reducerName} = reducer`;
 };
 
 module.exports.styled = styledName => {

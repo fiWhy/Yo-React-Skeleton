@@ -1,12 +1,15 @@
 import * as React from "react";
-import { createStore } from "redux";
+import configureStore from "redux-mock-store";
+import { Provider } from "react-redux";
+import { MemoryRouter } from "react-router-dom";
+<% if(route) { %>import { Router } from "react-router-dom";<% } %>
 import { create } from "react-test-renderer";
 import "jest";
 import <%= component.upperCamel %> from "./";
 
 describe("<%= component.upperCamel %> Component", () => {
-    const store = createStore(() => {});
-    const component = create(<<%= component.upperCamel %> store={store} />)
+    const store = configureStore()();
+    const component = create(<Provider store={store}><% if(route) { %><MemoryRouter><% } %><<%= component.upperCamel %>/><% if(route) { %></MemoryRouter><% } %></Provider>)
     const tree = component.toJSON();
     it("renders", () => {
         expect(tree).toMatchSnapshot();

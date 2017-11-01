@@ -13,10 +13,12 @@ module.exports = class extends Generator {
 			required: true
 		})
 			.option("action", {
-				type: String
+				type: String,
+				required: true
 			})
 			.option("actionName", {
-				type: String
+				type: String,
+				required: true
 			})
 			.option("async", {
 				type: Boolean
@@ -34,13 +36,8 @@ module.exports = class extends Generator {
 
 	initializing() {
 		const { componentNamePreparation } = textHelpers;
-		const { reducer, action, actionName } = this.options;
+		const { reducer } = this.options;
 		this.props = componentNamePreparation(reducer);
-		if ((action && !actionName) || (actionName && !action)) {
-			this.env.error("You should set action name if you setting path to action");
-		}
-		this.props.action = action;
-		this.props.actionName = actionName;
 	}
 
 	writing() {

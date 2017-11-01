@@ -20,13 +20,13 @@ class <%= component.upperCamel %> extends React.Component<any, any>{
 }<% if(reducer) { %>
 const mapStateToProps = (state) => {
     return {
-        <%= reducer.lower %>: state.<%= component.upperCamel %><%= reducer.upperCamel %>Reducer
+        <%= reducer.camel %>: state.<%= component.upperCamel %><%= reducer.upperCamel %>Reducer
     }
 }<% } %>
 <% if(action && reducer) { %>
 const mapDispatchToProps = (dispatch) => {
     return {
-        <%= action.upperCamel %>: () => dispatch(<%= action.upperCamel %>Action())
+        <%= action.upperCamel %>Action: () => dispatch(<%= action.upperCamel %>Action())
     }
 }<% } %>
 

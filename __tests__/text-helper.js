@@ -62,6 +62,7 @@ describe("text helpers", () => {
 		const prediction = {
 			fullPath: "./path/to/component-name",
 			path: from,
+			lower: "componentname",
 			folder: "./path/to",
 			name: "componentName",
 			dashed: "component-name",

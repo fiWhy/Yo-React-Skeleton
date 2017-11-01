@@ -35,17 +35,6 @@ describe("generator-react-skeleton:reducer", () => {
 		});
 	});
 
-	it("creates file with right content without action", done => {
-		const { reducerTemplate } = testConfig;
-		createReducer(reducer, {
-			async: false
-		}).then(({ config, content }) => {
-			const reducerContent = removeSpaces(reducerTemplate(config.upperCamel));
-			assert.equal(reducerContent, content);
-			done();
-		});
-	});
-
 	it("creates file with right content with action async", done => {
 		const { reducerTemplate } = testConfig;
 		const options = {

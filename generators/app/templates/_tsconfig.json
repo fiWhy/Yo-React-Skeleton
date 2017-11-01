@@ -7,12 +7,7 @@
     "jsx": "react",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ]
+    "lib": ["dom", "es2015"]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["./**/*.test.tsx?", "node_modules"]
 }

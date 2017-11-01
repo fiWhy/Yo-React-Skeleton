@@ -48,12 +48,14 @@ const componentNamePreparation = component => {
 	const name = nameFromPath(component);
 	const folder = folderPath(path);
 	const dashed = toDashCase(name);
+	const lower = name.toLowerCase();
 	const upperCamel = genComponentName(name);
 	const upper = name.toUpperCase();
 	const camel = toCamelCase(name);
 	const fullPath = `${folder}/${dashed}`;
 
 	return {
+		lower,
 		fullPath,
 		path,
 		folder,
