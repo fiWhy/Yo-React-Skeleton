@@ -6,7 +6,7 @@ var textHelpers = require("../helpers/text");
 var mainConfig = require("../config/main");
 var testConfig = require("../config/for-test");
 
-const createReducer = (reducer, options = {}) => {
+const createReducer = (reducer, options) => {
 	const config = testConfig.reducer(reducer, options.async);
 	const { dashed } = config;
 	const { removeSpaces, readCreatedFile } = textHelpers;
@@ -23,13 +23,19 @@ const createReducer = (reducer, options = {}) => {
 		});
 };
 
+const options = async => ({
+	async,
+	action: "../../test.action.ts",
+	actionName: "TestAction"
+});
+
 describe("generator-react-skeleton:reducer", () => {
 	const reducer = "./data";
 	const defaultReducer = "dataTest";
 	const { removeSpaces } = textHelpers;
 
 	it("creates files", done => {
-		createReducer(defaultReducer).then(({ config: { contentFiles } }) => {
+		createReducer(defaultReducer, options(false)).then(({ config: { contentFiles } }) => {
 			assert.file(contentFiles);
 			done();
 		});
@@ -37,19 +43,10 @@ describe("generator-react-skeleton:reducer", () => {
 
 	it("creates file with right content with action async", done => {
 		const { reducerTemplate } = testConfig;
-		const options = {
-			async: true,
-			action: "../../test.action.ts",
-			actionName: "TestAction"
-		};
-		createReducer(reducer, options).then(({ config, content }) => {
+		const opts = options(true);
+		createReducer(reducer, opts).then(({ config, content }) => {
 			const reducerContent = removeSpaces(
-				reducerTemplate(
-					config.upperCamel,
-					options.action,
-					options.actionName,
-					options.async
-				)
+				reducerTemplate(config.upperCamel, opts.action, opts.actionName, opts.async)
 			);
 			assert.equal(reducerContent, content);
 			done();

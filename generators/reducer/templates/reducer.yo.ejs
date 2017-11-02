@@ -1,5 +1,5 @@
-<% if(action && actionName) { %>import { <%= actionName %> } from "<%= action %>";
-import { createReducer<% if(async) { %>Async<% } %> } from "redux-act<% if(async) { %>-async<% } %>";<% } %>
+import { <%= actionName %> } from "<%= action %>";
+import { createReducer<% if(async) { %>Async<% } %> } from "redux-act<% if(async) { %>-async<% } %>";
 
 <% if(!async) { %>const reducer = createReducer({}, {});
 reducer.on(<%= actionName %>, state => state);
