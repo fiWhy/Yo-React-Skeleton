@@ -4,6 +4,6 @@ import { createReducer<% if(async) { %>Async<% } %> } from "redux-act<% if(async
 <% if(!async) { %>const reducer = createReducer({}, {});
 reducer.on(<%= actionName %>, state => state);
 export const <%= upperCamel %>Reducer = reducer;
-<% } else {%>
+<% } %><% if(async) { %>
 export const <%= upperCamel %>Reducer = createReducerAsync(<%= actionName %>);
 <% } %>
