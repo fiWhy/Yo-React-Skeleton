@@ -1,10 +1,10 @@
 import * as React from "react";
 import { create } from "react-test-renderer";
 import "jest";
-import <%= upperCamel %>Presentation from "./<%= dashed %>.presentation";
+import <%= upperCamel %> from "./<%= dashed %>";
 
-describe("<%= upperCamel %> Component Presentation", () => {
-    const component = create(<<%= upperCamel %>Presentation />)
+describe("<%= upperCamel %> Component", () => {
+    const component = create(<<%= upperCamel %> />)
     const tree = component.toJSON();
     it("renders", () => {
         expect(tree).toMatchSnapshot();

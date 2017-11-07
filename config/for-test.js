@@ -10,8 +10,8 @@ const app = () => {
 		projectDescription: "Hello there, Raccoon!",
 		projectDev: "Raccoon",
 		contentFiles: [
-			`${sourceRoot}/containers/dashboard/presentations/dashboard.presentation.tsx`,
-			`${sourceRoot}/containers/home/presentations/home.presentation.tsx`
+			`${sourceRoot}/containers/dashboard/components/dashboard.tsx`,
+			`${sourceRoot}/containers/home/components/home.tsx`
 		],
 
 		withAdditionalFiles: ["package.json", ".gitignore", "tsconfig.json"],
@@ -56,8 +56,8 @@ module.exports.presentation = component => {
 	const { dashed, fullPath } = preparations;
 	const componentPath = foldersConfig.detectPath(sourceRoot, fullPath);
 	let contentFiles = [
-		`${componentPath}/${dashed}.presentation.tsx`,
-		`${componentPath}/${dashed}.presentation.test.tsx`
+		`${componentPath}/${dashed}.tsx`,
+		`${componentPath}/${dashed}.test.tsx`
 	];
 
 	return Object.assign(
@@ -71,11 +71,11 @@ module.exports.presentation = component => {
 module.exports.presentationTemplate = function(withStyledComponents, component) {
 	return `import * as React from "react";
     
-    const ${component}Presentation = () => (
+    const ${component} = () => (
           <div>${component} works!</div>
     );
     
-    export default ${component}Presentation;
+    export default ${component};
     `;
 };
 

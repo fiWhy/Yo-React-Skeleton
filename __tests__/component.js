@@ -6,7 +6,7 @@ var textHelpers = require("../helpers/text");
 var mainConfig = require("../config/main");
 var testConfig = require("../config/for-test");
 
-describe("generator-react-skeleton:presentation", () => {
+describe("generator-react-skeleton:component", () => {
 	const component = "./data";
 	const { contentFiles, upperCamel, dashed } = testConfig.presentation(component);
 	const { sourceRoot } = mainConfig();
@@ -14,11 +14,11 @@ describe("generator-react-skeleton:presentation", () => {
 	let presentationCreatedContent;
 	beforeAll(() => {
 		return helpers
-			.run(path.join(__dirname, "../generators/presentation"))
+			.run(path.join(__dirname, "../generators/component"))
 			.withArguments([component])
 			.then(dir => {
 				presentationCreatedContent = removeSpaces(
-					readCreatedFile(dir, `${sourceRoot}/${dashed}.presentation.tsx`)
+					readCreatedFile(dir, `${sourceRoot}/${dashed}.tsx`)
 				);
 			});
 	});

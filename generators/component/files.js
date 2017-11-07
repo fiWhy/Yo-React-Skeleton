@@ -7,11 +7,11 @@ module.exports = function({ dashed, fullPath }) {
 	let mainFiles = [
 		{
 			from: `component-presentation.yo.ejs`,
-			to: `${componentDistPath}/${dashed}.presentation.tsx`
+			to: `${componentDistPath}/${dashed}.tsx`
 		},
 		{
 			from: `component-presentation.test.yo.ejs`,
-			to: `${componentDistPath}/${dashed}.presentation.test.tsx`
+			to: `${componentDistPath}/${dashed}.test.tsx`
 		}
 	];
 

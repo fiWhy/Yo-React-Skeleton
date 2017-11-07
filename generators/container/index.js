@@ -82,8 +82,8 @@ module.exports = class extends Generator {
 
 	generatePresentation() {
 		const { component: { name, fullPath }, action, reducer } = this.props;
-		this.composeWith(require.resolve("../presentation"), {
-			arguments: [`${fullPath}/presentations/${name}`]
+		this.composeWith(require.resolve("../component"), {
+			arguments: [`${fullPath}/components/${name}`]
 		});
 
 		if (action) {
