@@ -134,7 +134,7 @@ module.exports.reducerTemplate = function(
 			const defaultState = {
 				loading: false,
 				request: null,
-				data: [],
+				data: {},
 				error: null
 			}
 			export const ${reducerName} = createReducerAsync(${actionName}, defaultState);`;
