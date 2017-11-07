@@ -25,7 +25,7 @@ yo react-skeleton:container <path-to-container> --action=<action-name> --reducer
 
 Creating pure presentation.
 ```bash
-yo react-skeleton:presentation <path-to-presentation>
+yo react-skeleton:component <path-to-component>
 ```
 
 Creating pure styled component. Optional parameter is tagName ( default is div ).
