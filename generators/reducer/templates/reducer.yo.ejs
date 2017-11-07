@@ -1,9 +1,17 @@
 import { <%= actionName %> } from "<%= action %>";
 import { createReducer<% if(async) { %>Async<% } %> } from "redux-act<% if(async) { %>-async<% } %>";
 
-<% if(!async) { %>const reducer = createReducer({}, {});
+<% if(!async) { %>const defaultState = {};
+
+const reducer = createReducer({}, defaultState);
 reducer.on(<%= actionName %>, state => state);
 export const <%= upperCamel %>Reducer = reducer;
-<% } %><% if(async) { %>
-export const <%= upperCamel %>Reducer = createReducerAsync(<%= actionName %>);
+<% } %><% if(async) { %> const defaultState = {
+    loading: false,
+    request: null,
+    data: [],
+    error: null
+}
+
+export const <%= upperCamel %>Reducer = createReducerAsync(<%= actionName %>, defaultState);
 <% } %>

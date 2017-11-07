@@ -31,7 +31,7 @@ module.exports = class extends Generator {
 
 	writing() {
 		files(
-			Object.assign(this.props, this.defaultConfig, this.config.getAll())
+			Object.assign(this.props, this.mergedConfig, this.config.getAll())
 		).forEach(file => {
 			this.fs.copyTpl(
 				this.templatePath(file.from),

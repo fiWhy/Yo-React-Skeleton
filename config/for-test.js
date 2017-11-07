@@ -131,11 +131,18 @@ module.exports.reducerTemplate = function(
 	if (isAsync) {
 		return `import { ${actionName} } from "${action}";
 			import { createReducerAsync } from "redux-act-async";
-			export const ${reducerName} = createReducerAsync(${actionName});`;
+			const defaultState = {
+				loading: false,
+				request: null,
+				data: [],
+				error: null
+			}
+			export const ${reducerName} = createReducerAsync(${actionName}, defaultState);`;
 	}
 	return `import { ${actionName} } from "${action}";
 			import { createReducer } from "redux-act";
-			const reducer = createReducer({}, {});
+			const defaultState = {};
+			const reducer = createReducer({}, defaultState);
 			reducer.on(${actionName}, state => state );
 			export const ${reducerName} = reducer`;
 };
