@@ -2,8 +2,8 @@ import {ReducerCombiner} from '../utils/reducer/reducer.combiner';
 import {RouteCombiner} from '../utils/router/route.combiner';
 
 <% if(starterData) { %>
-import DashboardReducerProvider from '../components/dashboard/providers/reducer.provider';
-import DashboardRouteProvider from '../components/dashboard/providers/route.provider';
+import DashboardReducerProvider from '../containers/dashboard/providers/reducer.provider';
+import DashboardRouteProvider from '../containers/dashboard/providers/route.provider';
 <% } %>
 
 export const mainConfig = () => {

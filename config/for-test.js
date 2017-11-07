@@ -10,14 +10,14 @@ const app = () => {
 		projectDescription: "Hello there, Raccoon!",
 		projectDev: "Raccoon",
 		contentFiles: [
-			`${sourceRoot}/components/dashboard/presentations/dashboard.presentation.tsx`,
-			`${sourceRoot}/components/home/presentations/home.presentation.tsx`
+			`${sourceRoot}/containers/dashboard/presentations/dashboard.presentation.tsx`,
+			`${sourceRoot}/containers/home/presentations/home.presentation.tsx`
 		],
 
 		withAdditionalFiles: ["package.json", ".gitignore", "tsconfig.json"],
 		withContentFolders: [
-			`${sourceRoot}/components/dashboard`,
-			`${sourceRoot}/components/home`
+			`${sourceRoot}/containers/dashboard`,
+			`${sourceRoot}/containers/home`
 		]
 	};
 };

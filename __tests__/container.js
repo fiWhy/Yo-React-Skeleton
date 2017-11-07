@@ -16,10 +16,10 @@ const createComponent = (component, options = []) => {
 };
 
 describe("generator-react-skeleton:container", () => {
-	const componentNameFromRoot = "./components/testComponent";
-	const componentNameForAdditionalData = "./components/withAdditionalData";
+	const componentNameFromRoot = "./containers/testComponent";
+	const componentNameForAdditionalData = "./containers/withAdditionalData";
 	const componentNameForAdditionalDataNoOptions =
-		"./components/withAdditionalDataNoOptions";
+		"./containers/withAdditionalDataNoOptions";
 	const componentNameWithoutFolder = "testComponentWithoutFolder";
 	const componentNameFromCurrent = "./currentTestComponent";
 

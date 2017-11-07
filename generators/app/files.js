@@ -14,8 +14,8 @@ module.exports = function({ sourceRoot }) {
 		{ from: "config/webpack.dev.yo.tpl", to: "config/webpack.dev.js" },
 		{ from: "config/webpack.yo.tpl", to: "config/webpack.js" },
 
-		{ from: "src/components/app/**/*.tsx", to: `${sourceRoot}/components/app` },
-		{ from: "src/components/app/**/*.ts", to: `${sourceRoot}/components/app` },
+		{ from: "src/containers/app/**/*.tsx", to: `${sourceRoot}/containers/app` },
+		{ from: "src/containers/app/**/*.ts", to: `${sourceRoot}/containers/app` },
 		{ from: "src/config/*.tsx", to: `${sourceRoot}/config` },
 		{ from: "src/middlewares/*.ts", to: `${sourceRoot}/middlewares` },
 		{ from: "src/store/*.ts", to: `${sourceRoot}/store` },

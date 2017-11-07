@@ -33,7 +33,7 @@ module.exports = class extends Generator {
 				require.resolve("../container"),
 				Object.assign(
 					{
-						arguments: ["components/dashboard"]
+						arguments: ["containers/dashboard"]
 					},
 					options("/")
 				)
