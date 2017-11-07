@@ -164,5 +164,5 @@ module.exports.styled = styledName => {
 
 module.exports.styledTemplate = function(styledName, tagName) {
 	return `import styled from "styled-components";
-	export const ${styledName} = styled.${tagName}\`\`;`;
+	export default styled.${tagName}\`\`;`;
 };
