@@ -25,6 +25,7 @@ module.exports = class extends Generator {
 		const { starterData, styledComponents } = this.props;
 		const options = route => ({
 			route,
+			redux: true,
 			action: "data",
 			reducer: "data"
 		});

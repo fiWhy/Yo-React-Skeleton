@@ -29,6 +29,7 @@
       "styled-components": "^2.2.1"<% } %>
     },
     "devDependencies": {
+      "@types/enzyme": "^3.1.3",
       "@types/history": "^4.6.0",
       "@types/jquery": "^2.0.34",
       "@types/node": "^6.0.54",
@@ -46,6 +47,8 @@
       "@types/react-test-renderer": "^16.0.0",
       "awesome-typescript-loader": "^3.0.0-beta.17",
       "css-loader": "^0.25.0",
+      "enzyme": "^3.1.1",
+      "enzyme-adapter-react-16": "^1.0.4",
       "file-loader": "^0.9.0",
       "html-loader": "^0.4.4",
       "html-webpack-plugin": "^2.30.1",

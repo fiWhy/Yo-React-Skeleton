@@ -18,9 +18,9 @@ yo react-skeleton
 
 ## Commands
 
-Creating container with presentation. Optional parameters are: action, reducer, async, route - to configure your container.
+Creating container with presentation. Optional parameters are: action, reducer, async, route, redux - to configure your container.
 ```bash
-yo react-skeleton:container <path-to-container> --action=<action-name> --reducer=<reducer-name> --route=/<route>--async
+yo react-skeleton:container <path-to-container> --action=<action-name> --reducer=<reducer-name> --route=/<route> --async --redux
 ```
 
 Creating pure presentation.

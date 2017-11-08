@@ -23,6 +23,10 @@ module.exports = class extends Generator {
 			})
 			.option("action", {
 				type: String
+			})
+			.option("redux", {
+				type: Boolean,
+				default: false
 			});
 
 		this.mergedConfig = Object.assign(
@@ -46,7 +50,7 @@ module.exports = class extends Generator {
 
 	joinPropSettings() {
 		const { componentNamePreparation } = textHelpers;
-		const { route, action, reducer } = this.options;
+		const { route, action, reducer, redux } = this.options;
 		const { component: { dashed } } = this.props;
 		const propsAdditional = { action: null, reducer: null, route: null };
 
@@ -76,6 +80,8 @@ module.exports = class extends Generator {
 				componentNamePreparation(value)
 			);
 		}
+
+		propsAdditional.redux = redux;
 
 		Object.assign(this.props, propsAdditional);
 	}
