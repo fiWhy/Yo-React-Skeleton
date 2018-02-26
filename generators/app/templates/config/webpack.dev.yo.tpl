@@ -1,6 +1,3 @@
-/**
- * Created by Asus on 05.11.2016.
- */
 var config = require('./main');
 var webpackConfig = require('./webpack');
 var merge = require('webpack-merge');

@@ -1,0 +1,8 @@
+{
+  "name": "<%= projectName %>",
+  "short_name": "<%= projectShortName %>",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "<%= projectDescription %>"
+}

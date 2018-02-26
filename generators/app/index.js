@@ -3,6 +3,7 @@ const Generator = require("yeoman-generator");
 const yosay = require("yosay");
 const files = require("./files");
 const prompts = require("./prompts");
+const textHelpers = require("../../helpers/text");
 
 module.exports = class extends Generator {
 	constructor(args, opts) {
@@ -52,8 +53,10 @@ module.exports = class extends Generator {
 	}
 
 	conformProps() {
-		const { projectKeywords } = this.props;
+		const { projectKeywords, projectName } = this.props;
+		const { toDashCase, removeSpaces } = textHelpers;
 		this.props.projectKeywords = projectKeywords ? projectKeywords.split(",") : [];
+		this.props.packageName = toDashCase(removeSpaces(projectName));
 	}
 
 	writing() {

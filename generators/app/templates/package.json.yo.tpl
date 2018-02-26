@@ -1,5 +1,5 @@
 {
-    "name": "<%= projectName %>",
+    "name": "<%= packageName %>",
     "version": "0.1.0",
     "description": "<%= projectDescription %>",
     "main": "index.js",
@@ -46,6 +46,7 @@
       "@types/webpack-dev-server": "^2.9.0",
       "@types/react-test-renderer": "^16.0.0",
       "awesome-typescript-loader": "^3.0.0-beta.17",
+      "copy-webpack-plugin": "^4.4.2",
       "css-loader": "^0.25.0",
       "enzyme": "^3.1.1",
       "enzyme-adapter-react-16": "^1.0.4",
@@ -55,7 +56,7 @@
       "jsdoc": "^3.4.3",
       "node-sass": "^4.1.1",
       "sass-loader": "^4.0.2",
-      "typescript": "^2.5.3",
+      "typescript": "^2.7.2",
       "redux-mock-store": "^1.3.0",
       "webpack": "^3.6.0",
       "webpack-dev-server": "^2.9.1",

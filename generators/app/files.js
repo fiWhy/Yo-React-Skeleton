@@ -1,6 +1,7 @@
 module.exports = function({ sourceRoot }) {
 	let mainFiles = [
 		{ from: "_tsconfig.json", to: "tsconfig.json" },
+		{ from: "manifest.json", to: "manifest.json" },
 		{ from: "package.json.yo.tpl", to: "package.json" },
 		{ from: "_gitignore", to: ".gitignore" },
 		{ from: "helpers/*.js", to: "helpers" },

@@ -7,6 +7,12 @@ module.exports = [
 	},
 	{
 		type: "input",
+		name: "projectShortName",
+		message: "What is your project short name? (for manifest)",
+		default: this.appname
+	},
+	{
+		type: "input",
 		name: "projectDescription",
 		message: "Project description"
 	},
