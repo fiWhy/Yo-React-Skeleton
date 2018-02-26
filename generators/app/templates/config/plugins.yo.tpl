@@ -14,6 +14,10 @@ module.exports = [
     new CopyWebpackPlugin([{
         from: config.manifest,
         to: config.dist
+    },
+    {
+        from: config.sw,
+        to: config.dist
     }]),
     new ExtractTextPlugin("styles.css")
 ];

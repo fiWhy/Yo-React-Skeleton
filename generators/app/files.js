@@ -24,7 +24,8 @@ module.exports = function({ sourceRoot }) {
 		{ from: "src/index.html", to: `${sourceRoot}/index.html` },
 		{ from: "src/config/bootstrap.yo.tpl", to: `${sourceRoot}/config/bootstrap.ts` },
 		{ from: "src/app.tsx", to: `${sourceRoot}/app.tsx` },
-		{ from: "src/vendor.ts", to: `${sourceRoot}/vendor.ts` }
+		{ from: "src/vendor.ts", to: `${sourceRoot}/vendor.ts` },
+		{ from: "src/sw.yo.tpl", to: `${sourceRoot}/sw.js` }
 	];
 
 	return mainFiles;

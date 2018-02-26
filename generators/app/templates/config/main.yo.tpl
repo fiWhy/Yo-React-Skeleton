@@ -8,6 +8,8 @@ module.exports = (function() {
         dist = root('dist'),
         html = root("src", "index.html"),
         devPort = 3000,
+        manifest = root("manifest.json"),
+        sw = root("src", "sw.js"),
         extensions = ['.js', '.ts', '.tsx', '.html', 'scss'],
         aliases = {
             containers: root("src/containers"),
@@ -24,6 +26,8 @@ module.exports = (function() {
         devPort: devPort,
         extensions: extensions,
         html: html,
+        sw: sw,
+        manifest: manifest,
         aliases: aliases
     }
 })();
