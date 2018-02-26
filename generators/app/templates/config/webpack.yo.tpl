@@ -9,6 +9,7 @@ var plugins = require('./plugins');
 module.exports = {
     resolve: {
         extensions: config.extensions,
+        alias: config.aliases
     },
     module: {
         loaders: loaders

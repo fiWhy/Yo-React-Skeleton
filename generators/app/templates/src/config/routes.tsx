@@ -1,7 +1,7 @@
 import * as React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { registerRoutes } from "./bootstrap";
-import {RouteCombiner} from '../utils/router/route.combiner';
+import {RouteCombiner} from 'utils/router/route.combiner';
 
 registerRoutes();
 

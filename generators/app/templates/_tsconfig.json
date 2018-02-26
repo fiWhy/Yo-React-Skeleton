@@ -7,7 +7,15 @@
     "jsx": "react",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
+    "lib": ["dom", "es2015"],
+    "baseUrl": "<%= sourceRoot %>",
+    "paths": {
+      "containers/*": ["containers/*"],
+      "middlewares/*": ["middlewares/*"],
+      "utils/*": ["utils/*"],
+      "store/*": ["store/*"],
+      "config/*": ["config/*"]
+    }
   },
   "exclude": ["./**/*.test.tsx?", "node_modules"]
 }

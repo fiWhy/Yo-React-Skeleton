@@ -1,5 +1,5 @@
-import {ReducerCombiner} from '../utils/reducer/reducer.combiner';
-import {RouteCombiner} from '../utils/router/route.combiner';
+import {ReducerCombiner} from 'utils/reducer/reducer.combiner';
+import {RouteCombiner} from 'utils/router/route.combiner';
 
 <% if(starterData) { %>
 import DashboardReducerProvider from '../containers/dashboard/providers/reducer.provider';

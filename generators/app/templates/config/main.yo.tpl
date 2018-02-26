@@ -8,7 +8,14 @@ module.exports = (function() {
         dist = root('dist'),
         html = root("src", "index.html"),
         devPort = 3000,
-        extensions = ['.js', '.ts', '.tsx', '.html', 'scss'];
+        extensions = ['.js', '.ts', '.tsx', '.html', 'scss'],
+        aliases = {
+            containers: root("src/containers"),
+            middlewares: root("src/middlewares"),
+            utils: root("src/utils"),
+            store: root("src/store"),
+            config: root("src/config")
+        };
 
     return {
         base: base,
@@ -16,6 +23,7 @@ module.exports = (function() {
         dist: dist,
         devPort: devPort,
         extensions: extensions,
-        html: html
+        html: html,
+        aliases: aliases
     }
 })();
