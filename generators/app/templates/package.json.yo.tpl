@@ -8,9 +8,9 @@
       "prod": "set NODE_ENV=production&& npm run build",
       "dev": "set NODE_ENV=development&& npm run build",
       "start": "npm i && npm run test && npm run serve",
-      "build": "npm run webpack && npm run test",
+      "build": "npm run webpack && npm run test -- -u",
       "test": "jest",
-      "serve": "node tasks/webpack-server",
+      "serve": "set NODE_ENV=development&&node tasks/webpack-server",
       "webpack": "node tasks/webpack",
       "postinstall": "npm test"
     },

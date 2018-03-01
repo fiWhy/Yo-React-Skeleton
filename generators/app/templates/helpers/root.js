@@ -1,6 +1,3 @@
-/**
- * Created by Asus on 05.11.2016.
- */
 var path = require('path');
 module.exports = function() {
   var parts = Array.prototype.splice.call(arguments,0),

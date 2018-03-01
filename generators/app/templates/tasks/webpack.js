@@ -1,13 +1,9 @@
-/**
- * Created by Asus on 05.11.2016.
- */
-var ENV = process.env.NODE_ENV || 'development';
+var config = require("../config/main");
 var wepback = require('webpack');
-var configPath = ENV == 'development'? 'webpack.dev': 'webpack.prod';
-var webpackConfig = require('../config/' + configPath + '.js');
+var webpackConfig = require('../config/webpack.dev.js');
 
 function run() {
-    return wepback(webpackConfig, function(data) {
+    return wepback(webpackConfig, function (data) {
 
     })
 }

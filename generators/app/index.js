@@ -60,12 +60,17 @@ module.exports = class extends Generator {
 	}
 
 	writing() {
-		files(Object.assign(this.props, this.config.getAll())).forEach(file => {
+		const { mainFiles, assets } = files(Object.assign(this.props, this.config.getAll()));
+		mainFiles.forEach(file => {
 			this.fs.copyTpl(
 				this.templatePath(file.from),
 				this.destinationPath(file.to),
 				this.props
 			);
+		});
+
+		assets.forEach(file => {
+			this.fs.copy(this.templatePath(file.from), this.destinationPath(file.to));
 		});
 	}
 

@@ -1,5 +1,5 @@
 module.exports = function({ sourceRoot }) {
-	let mainFiles = [
+	const mainFiles = [
 		{ from: "_tsconfig.json", to: "tsconfig.json" },
 		{ from: "manifest.json", to: "manifest.json" },
 		{ from: "package.json.yo.tpl", to: "package.json" },
@@ -25,8 +25,14 @@ module.exports = function({ sourceRoot }) {
 		{ from: "src/config/bootstrap.yo.tpl", to: `${sourceRoot}/config/bootstrap.ts` },
 		{ from: "src/app.tsx", to: `${sourceRoot}/app.tsx` },
 		{ from: "src/vendor.ts", to: `${sourceRoot}/vendor.ts` },
-		{ from: "src/sw.yo.tpl", to: `${sourceRoot}/sw.js` }
+		{ from: "src/sw.yo.tpl", to: `${sourceRoot}/sw.js` },
+		{ from: "src/styles.scss", to: `${sourceRoot}/styles.scss` }
 	];
 
-	return mainFiles;
+	const assets = [
+		{ from: "images/*.png", to: "images" },
+		{ from: "src/favicon.ico", to: `${sourceRoot}/src/favicon.ico` }
+	];
+
+	return { mainFiles, assets };
 };

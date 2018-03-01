@@ -1,6 +1,3 @@
-/**
- * Created by Asus on 05.11.2016.
- */
 var webpack = require('webpack');
 var mainConfig = require('../config/main');
 var webpackDevServer = require('webpack-dev-server');
