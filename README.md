@@ -1,4 +1,4 @@
-# generator-react-skeleton [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-react-skeleton [![NPM version][npm-image]][npm-url]
 > React16 boilerplate
 
 ## Installation
@@ -53,9 +53,3 @@ MIT [Denis Buryachkovsky](https://github.com/fiWhy)
 
 [npm-image]: https://badge.fury.io/js/generator-react-skeleton.svg
 [npm-url]: https://npmjs.org/package/generator-react-skeleton
-[travis-image]: https://travis-ci.org//generator-react-skeleton.svg?branch=master
-[travis-url]: https://travis-ci.org//generator-react-skeleton
-[daviddm-image]: https://david-dm.org//generator-react-skeleton.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//generator-react-skeleton
-[coveralls-image]: https://coveralls.io/repos//generator-react-skeleton/badge.svg
-[coveralls-url]: https://coveralls.io/r//generator-react-skeleton
