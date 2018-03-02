@@ -1,6 +1,6 @@
-var config = require('./main');
-var webpackConfig = require('./webpack');
-var merge = require('webpack-merge');
+var config = require("./main");
+var webpackConfig = require("./webpack");
+var merge = require("webpack-merge");
 
 module.exports = merge(webpackConfig, {
     entry: {
@@ -10,7 +10,7 @@ module.exports = merge(webpackConfig, {
     
     output: {
         path: config.dist,
-        filename: '[name].bundle.js'
+        filename: "[name].bundle.js"
     },
 
     devServer: {
