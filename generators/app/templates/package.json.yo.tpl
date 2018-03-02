@@ -5,12 +5,12 @@
     "main": "index.js",
     "keywords": [],
     "scripts": {
-      "prod": "cross-env NODE_ENV=production&& npm run build",
-      "dev": "cross-env NODE_ENV=development&& npm run build",
+      "prod": "cross-env NODE_ENV=production npm run build",
+      "dev": "cross-env NODE_ENV=development npm run build && npm run test -- -u",
       "start": "npm i && npm run test && npm run serve",
-      "build": "npm run webpack && npm run test -- -u",
+      "build": "npm run webpack",
       "test": "jest",
-      "serve": "cross-env NODE_ENV=development&&node tasks/webpack-server",
+      "serve": "cross-env NODE_ENV=development node tasks/webpack-server",
       "webpack": "node tasks/webpack",
       "postinstall": "npm test"
     },
