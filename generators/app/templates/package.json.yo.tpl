@@ -5,12 +5,12 @@
     "main": "index.js",
     "keywords": [],
     "scripts": {
-      "prod": "set NODE_ENV=production&& npm run build",
-      "dev": "set NODE_ENV=development&& npm run build",
+      "prod": "cross-env NODE_ENV=production&& npm run build",
+      "dev": "cross-env NODE_ENV=development&& npm run build",
       "start": "npm i && npm run test && npm run serve",
       "build": "npm run webpack && npm run test -- -u",
       "test": "jest",
-      "serve": "set NODE_ENV=development&&node tasks/webpack-server",
+      "serve": "cross-env NODE_ENV=development&&node tasks/webpack-server",
       "webpack": "node tasks/webpack",
       "postinstall": "npm test"
     },
@@ -48,6 +48,7 @@
       "awesome-typescript-loader": "^3.0.0-beta.17",
       "copy-webpack-plugin": "^4.4.2",
       "css-loader": "^0.25.0",
+      "cross-env": "^5.1.3",
       "enzyme": "^3.1.1",
       "enzyme-adapter-react-16": "^1.0.4",
       "file-loader": "^0.9.0",

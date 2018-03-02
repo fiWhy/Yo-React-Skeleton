@@ -30,4 +30,6 @@ const mapDispatchToProps = (dispatch) => {
     }
 }<% } %><% } %>
 
-export default <% if(route) { %>withRouter(<% } %><% if(redux) { %>connect(<% } %><% if(action && reducer) { %>mapStateToProps, mapDispatchToProps<% } %><% if(redux) { %>)(<% } %><%= component.upperCamel %><% if(redux) { %>)<% } %><% if(route) { %>)<% } %>;
+<% if(!route) { %> export default <% } %><% if(route) {%>const <%= component.upperCamel %>Component: React.ComponentType<any> = <% } %><% if(redux) { %>connect(<% } %><% if(action && reducer) { %>mapStateToProps, mapDispatchToProps<% } %><% if(redux) { %>)(<% } %><%= component.upperCamel %><% if(redux) { %>)<% } %>;
+    
+<% if(route) { %>export default withRouter(<%= component.upperCamel %>Component);<% } %>
